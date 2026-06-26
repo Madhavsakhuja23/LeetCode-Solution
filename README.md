@@ -40,4 +40,17 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0049-group-anagrams](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0049-group-anagrams) |
+| [0204-count-primes](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0204-count-primes) |
+## Math
+|  |
+| ------- |
+| [0204-count-primes](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0204-count-primes) |
+## Enumeration
+|  |
+| ------- |
+| [0204-count-primes](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0204-count-primes) |
+## Number Theory
+|  |
+| ------- |
+| [0204-count-primes](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0204-count-primes) |
 <!---LeetCode Topics End-->
