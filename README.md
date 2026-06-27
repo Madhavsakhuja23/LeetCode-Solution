@@ -6,16 +6,19 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0207-course-schedule](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0210-course-schedule-ii) |
+| [0547-number-of-provinces](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0547-number-of-provinces) |
 ## Breadth-First Search
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0210-course-schedule-ii) |
+| [0547-number-of-provinces](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0547-number-of-provinces) |
 ## Graph Theory
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0210-course-schedule-ii) |
+| [0547-number-of-provinces](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0547-number-of-provinces) |
 ## Topological Sort
 |  |
 | ------- |
@@ -53,4 +56,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 |  |
 | ------- |
 | [0204-count-primes](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0204-count-primes) |
+## Union-Find
+|  |
+| ------- |
+| [0547-number-of-provinces](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0547-number-of-provinces) |
 <!---LeetCode Topics End-->
