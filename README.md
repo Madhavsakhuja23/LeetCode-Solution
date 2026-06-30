@@ -36,6 +36,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Hash Table
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0001-two-sum) |
 | [0049-group-anagrams](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0049-group-anagrams) |
 | [0242-valid-anagram](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0242-valid-anagram) |
 ## String
@@ -51,6 +52,7 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 ## Array
 |  |
 | ------- |
+| [0001-two-sum](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0001-two-sum) |
 | [0049-group-anagrams](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0049-group-anagrams) |
 | [0118-pascals-triangle](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0118-pascals-triangle) |
 | [0119-pascals-triangle-ii](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0119-pascals-triangle-ii) |
