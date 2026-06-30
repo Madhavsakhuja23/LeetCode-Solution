@@ -82,4 +82,8 @@ A collection of LeetCode questions to ace the coding interview! - Created using 
 | ------- |
 | [0118-pascals-triangle](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0118-pascals-triangle) |
 | [0119-pascals-triangle-ii](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/0119-pascals-triangle-ii) |
+## Bit Manipulation
+|  |
+| ------- |
+| [2220-minimum-bit-flips-to-convert-number](https://github.com/Madhavsakhuja23/LeetCode-Solution/tree/master/2220-minimum-bit-flips-to-convert-number) |
 <!---LeetCode Topics End-->
