@@ -7,7 +7,7 @@ class Solution {
         int res =0;
         for(int ele: set){
             if(!set.contains(ele-1)){
-                int len = 0;
+                int len = 1;
                 while(set.contains(ele+len)){
                     len++;
                 }
