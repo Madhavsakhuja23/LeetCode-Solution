@@ -6,6 +6,7 @@ class Solution {
             for(int j=0;j<n;j++){
                 dis[i][j]=Integer.MAX_VALUE;
             }
+            dis[i][i]=0;
         }
         for(int i=0;i<m;i++){
             int u=edges[i][0];
@@ -13,9 +14,6 @@ class Solution {
             int wt = edges[i][2];
             dis[u][v]=wt;
             dis[v][u]=wt;
-        }
-        for(int i=0;i<n;i++){
-            dis[i][i]=0;
         }
         for(int k=0;k<n;k++){
             for(int i=0;i<n;i++){
