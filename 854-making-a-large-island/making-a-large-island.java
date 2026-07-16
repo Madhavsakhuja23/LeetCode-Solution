@@ -79,9 +79,7 @@ class Solution {
             }
 
         }
-        for(int i=0;i<n*n;i++){
-            mx=Math.max(mx, ds.size.get(ds.findUParent(i)));
-        }
+     mx =Math.max(mx, ds.size.get(ds.findUParent(0)));
         return mx;
     }
 }
