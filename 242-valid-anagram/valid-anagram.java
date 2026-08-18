@@ -1,16 +1,23 @@
 class Solution {
     public boolean isAnagram(String s, String t) {
-        TreeMap<Character,Integer> mp1 = new TreeMap<>();
-        TreeMap<Character,Integer> mp2 = new TreeMap<>();
 
-        for(int i=0;i<s.length();i++){
-            mp1.put(s.charAt(i), mp1.getOrDefault(s.charAt(i), 0)+1);
+        if (s.length() != t.length()) {
+            return false;
         }
 
-        for(int i=0;i<t.length();i++){
-            mp2.put(t.charAt(i), mp2.getOrDefault(t.charAt(i), 0)+1);
+        int[] freq = new int[26];
+
+        for (int i = 0; i < s.length(); i++) {
+            freq[s.charAt(i) - 'a']++;
+            freq[t.charAt(i) - 'a']--;
         }
 
-        return mp1.equals(mp2);
+        for (int x : freq) {
+            if (x != 0) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
