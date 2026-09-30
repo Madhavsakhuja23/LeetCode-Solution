@@ -1,35 +1,43 @@
 class Solution {
-    public List<List<Integer>> combinationSum2(int[] candidates, int target) {
+
+    public List<List<Integer>> combinationSum2(int[] arr, int t) {
+
         List<List<Integer>> res = new ArrayList<>();
-        Arrays.sort(candidates);
-        HashSet<List<Integer>> ans = new HashSet<>();
-        solve(0,target, candidates, new ArrayList<>(), ans);
-        for(List<Integer> a: ans){
-            res.add(a);
-        }
+
+        Arrays.sort(arr);
+
+        solve(arr, res, new ArrayList<>(), t, 0);
+
         return res;
     }
-    public void solve(int i, int target, int[] cand, List<Integer> arr, HashSet<List<Integer>> res){
-        
-        if (target == 0) {
-            res.add(new ArrayList<>(arr));
+
+    public void solve(int[] arr, List<List<Integer>> res,
+                      List<Integer> semi, int t, int i) {
+
+        if (t == 0) {
+            res.add(new ArrayList<>(semi));
             return;
         }
 
-        if (i == cand.length || target < 0) {
+        if (i == arr.length || t < 0) {
             return;
         }
-        if(cand[i]<=target){
-            arr.add(cand[i]);
-            solve(i+1, target-cand[i], cand,arr,res);
-            arr.remove(Integer.valueOf(cand[i]));
+
+        if (arr[i] <= t) {
+
+            semi.add(arr[i]);
+
+            solve(arr, res, semi, t - arr[i], i + 1);
+
+            semi.remove(semi.size() - 1);
         }
-        int next = i;
-         while (next < cand.length && cand[next] == cand[i]) {
+
+        int next = i + 1;
+
+        while (next < arr.length && arr[next] == arr[i]) {
             next++;
         }
 
-        solve(next, target, cand, arr, res);
+        solve(arr, res, semi, t, next);
     }
-
 }
