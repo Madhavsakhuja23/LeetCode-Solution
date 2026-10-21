@@ -1,12 +1,13 @@
 class Solution {
     public double myPow(double x, int n) {
-        long N = n;
+        double ans = solve(x, Math.abs(n));
         if(n<0){
-            return solve(1/x, -N);
+            return 1/ans;
         }
-        return solve(x, N);
+        return ans;
     }
-    public double solve(double x, long n){
+
+    public double solve(double x, int n){
         if(n==0){
             return 1;
         }
