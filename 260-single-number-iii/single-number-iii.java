@@ -6,8 +6,16 @@ class Solution {
             xor=xor^nums[i];
         }
 
-        int mask = xor & - xor;
+        int i =0;
+        int m = xor;
+        while(true){
+            if((m & (1<<i))!=0){
+                break;
+            }
+            i++;
+        }
 
+        int mask = (1<<i);
         int group1 =0;
         int group2 =0;
         for(int num: nums){
