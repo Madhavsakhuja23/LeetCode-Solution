@@ -1,29 +1,29 @@
 class Solution {
     public int divide(int dividend, int divisor) {
-        if(dividend == Integer.MIN_VALUE && divisor == -1){
+        if(dividend == Integer.MIN_VALUE && divisor ==-1){
             return Integer.MAX_VALUE;
         }
+
         long a = Math.abs((long) dividend);
         long b = Math.abs((long) divisor);
 
-        boolean neg = (dividend<0)^(divisor<0);
+        boolean neg = (dividend<0) ^ (divisor<0);
 
-        long quotient = 0;
+        long q =0;
         while(a>=b){
             long temp = b;
-            long multiple = 1;
+            long mltiple = 1;
 
             while(a>=(temp<<1)){
                 temp=temp<<1;
-                multiple=(multiple<<1);
+                mltiple= mltiple<<1;
             }
-            quotient=quotient + multiple;
-            a=a-temp;
+             q = q+mltiple;
+             a=a-temp;
         }
-
-        if(neg==true){
-            return (int)-quotient;
+        if(neg){
+            return (int) -q;
         }
-        return (int)quotient;
+        return (int) q;
     }
 }
