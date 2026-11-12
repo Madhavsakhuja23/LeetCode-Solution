@@ -1,6 +1,6 @@
 class MyQueue {
-    Stack<Integer> in; 
-    Stack<Integer> out; 
+    Stack<Integer> in;
+    Stack<Integer> out;
     public MyQueue() {
         in = new Stack<>();
         out = new Stack<>();
@@ -29,7 +29,7 @@ class MyQueue {
     }
     
     public boolean empty() {
-        return in.isEmpty()&&out.isEmpty();
+        return in.isEmpty() && out.isEmpty();
     }
 }
 
