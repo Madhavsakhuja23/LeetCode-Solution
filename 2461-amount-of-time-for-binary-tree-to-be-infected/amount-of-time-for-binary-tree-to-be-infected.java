@@ -27,26 +27,26 @@ class Solution {
         visited.put(find(root, start), true);
         while(!q.isEmpty()){
             int ls = q.size();
-            boolean f = false;
+            boolean burnedAny = false;
             for(int i=0;i<ls;i++){
                 TreeNode node = q.poll();
                 if(node.left!=null && visited.get(node.left)==null){
                     q.add(node.left);
                     visited.put(node.left, true);
-                    f=true;
+                    burnedAny=true;
                 }
                 if(node.right!=null && visited.get(node.right)==null){
                     q.add(node.right);
                     visited.put(node.right, true);
-                    f=true;
+                    burnedAny=true;
                 }
                 if(mp.get(node)!=null && visited.get(mp.get(node))==null){
                     q.add(mp.get(node));
                     visited.put(mp.get(node), true);
-                    f=true;
+                    burnedAny=true;
                 }
             }
-            if(f){
+            if(burnedAny){
                 res++;
             }
         }
