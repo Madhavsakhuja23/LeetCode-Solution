@@ -25,7 +25,7 @@ class Solution {
         return res[0];
     }
     public void findKsmallest(TreeNode root, int k, int curr[], int ans[]){
-        if(root==null || curr[0] >= k){
+        if(root==null){
             return;
         }
         findKsmallest(root.left,k,curr,ans);
