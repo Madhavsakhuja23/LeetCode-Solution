@@ -1,59 +1,57 @@
-class Pair{
-    int x;
-    int y;
-    int tm;
-    Pair(int i, int j, int t){
-        x=i;
-        y=j;
-        tm=t;
-    }
-}
 class Solution {
     public int orangesRotting(int[][] grid) {
+        int res =0;
+        int countFresh =0;
         int n = grid.length;
         int m = grid[0].length;
-        int cntFresh = 0;
+        int visited[][] = new int[n][m];
         Queue<Pair> q = new LinkedList<>();
-        int vis[][] = new int[n][m];
-        for(int it[] : vis){
-            Arrays.fill(it, 0);
-        }
         for(int i=0;i<n;i++){
             for(int j=0;j<m;j++){
-                if(grid[i][j]==1){
-                    cntFresh++;
-                }
                 if(grid[i][j]==2){
-                    q.add(new Pair(i, j, 0));
-                    vis[i][j]=1;
+                    q.add(new Pair(i,j,0));
+                    visited[i][j]=1;
+                }else{
+                    visited[i][j]=0;
+                    if(grid[i][j]==1){
+                    countFresh++;
+                    }
                 }
             }
         }
-        int ans = 0;
-        int Nfrsh = 0;
-        int mrow[] = {-1,0,1,0};
-        int mcol[] = {0,1,0,-1};
+        int rottened =0;
         while(!q.isEmpty()){
-            Pair curr = q.poll();
-            int row = curr.x;
-            int col = curr.y;
-            int tm = curr.tm;
-            ans = Math.max(tm, ans);
+            Pair p = q.poll();
+            int row = p.row;
+            int col = p.col;
+            res = Math.max(res,p.time);
+
+            int drow[] = {-1,0,1,0};
+            int dcol[] ={0,1,0,-1};
 
             for(int i=0;i<4;i++){
-                int nrow = row+mrow[i];
-                int ncol = col+mcol[i];
-
-                if(nrow>=0 && nrow<n && ncol>=0 && ncol<m && vis[nrow][ncol]==0 && grid[nrow][ncol]==1){
-                    q.add(new Pair(nrow, ncol, tm+1));
-                    vis[nrow][ncol]=1;
-                    Nfrsh++;
+                int nrow = row+drow[i];
+                int ncol = col+dcol[i];
+                if(nrow>=0 && ncol>=0 && nrow<n && ncol<m && grid[nrow][ncol]==1 && visited[nrow][ncol]==0){
+                    visited[nrow][ncol]=1;
+                    q.add(new Pair(nrow,ncol,p.time+1));
+                    rottened++;
                 }
             }
         }
-        if(cntFresh!=Nfrsh){
+        if(countFresh!=rottened){
             return -1;
         }
-        return ans;
+        return res;
+    }
+}
+class Pair{
+    int row;
+    int col;
+    int time;
+    Pair(int r, int c,int t){
+        row=r;
+        col=c;
+        time=t;
     }
 }
