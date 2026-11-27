@@ -22,9 +22,7 @@ class Solution {
         for(int k=0;k<2;k++){
             int ni = i+dr[k];
             int nj = j+dc[k];
-            if(ni>=0 && nj>=0){
-                paths = paths+solve(ni,nj,dp);
-            }
+            paths = paths+solve(ni,nj,dp);
         }
         return dp[i][j] = paths;
     }
